@@ -1,0 +1,19 @@
+# secrets — NEVER commit
+.env
+*.key
+*token*.txt
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# data / caches (large + may contain raw provider data)
+data/
+*cache*/
+fmp_cache/
+*.log
+
+# node (site lives in a separate repo)
+node_modules/
+.next/

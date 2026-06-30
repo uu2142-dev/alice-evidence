@@ -1,0 +1,61 @@
+{
+  "proposal_hash": "58d89a19c8ad4d251cd5e982bda87468ae8618620c9dc91d4823490bcc8b8366",
+  "data_integrity": {
+    "median_insider_depth_days": 2189,
+    "coverage_frac": 0.93,
+    "total_events": 44567,
+    "min_required_days": 540
+  },
+  "results": [
+    {
+      "h": "insider_sell/hot_momentum/42d/short",
+      "models": 5,
+      "n": 4818,
+      "signed_pct": -0.57,
+      "t": -2.74,
+      "survives": false
+    },
+    {
+      "h": "insider_buy/cold_momentum/63d/long",
+      "models": 5,
+      "n": 1875,
+      "signed_pct": -2.17,
+      "t": -5.62,
+      "survives": false
+    },
+    {
+      "h": "insider_sell/any_momentum/21d/short",
+      "models": 2,
+      "n": 13303,
+      "signed_pct": -0.45,
+      "t": -6.21,
+      "survives": false
+    },
+    {
+      "h": "insider_sell/cold_momentum/21d/short",
+      "models": 1,
+      "n": 3552,
+      "signed_pct": -1.21,
+      "t": -9.48,
+      "survives": false
+    },
+    {
+      "h": "insider_buy/any_momentum/21d/long",
+      "models": 1,
+      "n": 5944,
+      "signed_pct": -0.39,
+      "t": -3.64,
+      "survives": false
+    },
+    {
+      "h": "insider_buy/hot_momentum/21d/long",
+      "models": 1,
+      "n": 1834,
+      "signed_pct": -0.06,
+      "t": -0.32,
+      "survives": false
+    }
+  ],
+  "merkle_root": "3b3c9b13dc46b1f21066c5c361ffa06eeded2af20d99f1340b861d041c08c19a",
+  "at": "2026-06-26T06:11:58.001070Z"
+}

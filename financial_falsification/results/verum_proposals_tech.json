@@ -1,0 +1,95 @@
+{
+  "sector": "TECH",
+  "panel": [
+    "gemini-2.5-flash",
+    "llama-3.1-8b-instant",
+    "llama-3.3-70b-versatile",
+    "meta-llama/llama-4-scout-17b-16e-instruct",
+    "qwen/qwen3-32b"
+  ],
+  "hypotheses": [
+    {
+      "h": [
+        "insider_sell",
+        "hot_momentum",
+        42,
+        "short"
+      ],
+      "proposers": [
+        "gemini-2.5-flash",
+        "llama-3.1-8b-insta",
+        "llama-3.3-70b-vers",
+        "llama-4-scout-17b-",
+        "qwen3-32b"
+      ],
+      "n_models": 5
+    },
+    {
+      "h": [
+        "insider_buy",
+        "cold_momentum",
+        63,
+        "long"
+      ],
+      "proposers": [
+        "gemini-2.5-flash",
+        "llama-3.1-8b-insta",
+        "llama-3.3-70b-vers",
+        "llama-4-scout-17b-",
+        "qwen3-32b"
+      ],
+      "n_models": 5
+    },
+    {
+      "h": [
+        "insider_sell",
+        "cold_momentum",
+        21,
+        "short"
+      ],
+      "proposers": [
+        "gemini-2.5-flash"
+      ],
+      "n_models": 1
+    },
+    {
+      "h": [
+        "insider_buy",
+        "any_momentum",
+        21,
+        "long"
+      ],
+      "proposers": [
+        "llama-3.1-8b-insta"
+      ],
+      "n_models": 1
+    },
+    {
+      "h": [
+        "insider_sell",
+        "any_momentum",
+        21,
+        "short"
+      ],
+      "proposers": [
+        "llama-3.3-70b-vers",
+        "llama-4-scout-17b-"
+      ],
+      "n_models": 2
+    },
+    {
+      "h": [
+        "insider_buy",
+        "hot_momentum",
+        21,
+        "long"
+      ],
+      "proposers": [
+        "qwen3-32b"
+      ],
+      "n_models": 1
+    }
+  ],
+  "sealed_at": "2026-06-26T04:04:14.148032Z",
+  "proposal_hash": "58d89a19c8ad4d251cd5e982bda87468ae8618620c9dc91d4823490bcc8b8366"
+}

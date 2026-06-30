@@ -1,0 +1,47 @@
+{
+  "prereg_hash": "0f968d09396d66acb40f59d4bd54876eae7c10dcca81a5398b3b4a887a9f32d2",
+  "results": [
+    {
+      "id": "H1_OND_short",
+      "n": 53,
+      "signed_pct": 12.413,
+      "t": 7.796,
+      "p": 0.0,
+      "survives": true
+    },
+    {
+      "id": "H2_insider_buy",
+      "n": 117,
+      "signed_pct": -3.881,
+      "t": -3.999,
+      "p": 6e-05,
+      "survives": false
+    },
+    {
+      "id": "H3_momentum",
+      "n": 193,
+      "signed_pct": 1.228,
+      "t": 1.41,
+      "p": 0.15846,
+      "survives": false
+    },
+    {
+      "id": "H4_sell_any",
+      "n": 225,
+      "signed_pct": 0.366,
+      "t": 0.517,
+      "p": 0.60546,
+      "survives": false
+    },
+    {
+      "id": "H5_sell_cold",
+      "n": 79,
+      "signed_pct": -2.259,
+      "t": -2.293,
+      "p": 0.02183,
+      "survives": false
+    }
+  ],
+  "evaluated_at": "2026-06-26T01:23:08.202277Z",
+  "merkle_root": "14e6e1e04d1d978931b1d5671eba8a5f1be19560fa971abd79dd5c8202793012"
+}

@@ -1,0 +1,38 @@
+{
+  "BUY_1": {
+    "n": 3404,
+    "raw_pct": 0.139,
+    "edge_pct": -1.523,
+    "t_vs_single": null
+  },
+  "BUY_2": {
+    "n": 827,
+    "raw_pct": -0.635,
+    "edge_pct": -2.442,
+    "t_vs_single": -1.972
+  },
+  "BUY_3+": {
+    "n": 700,
+    "raw_pct": 2.215,
+    "edge_pct": 0.151,
+    "t_vs_single": 3.401
+  },
+  "SELL_1": {
+    "n": 3338,
+    "raw_pct": -0.178,
+    "edge_pct": -1.73,
+    "t_vs_single": null
+  },
+  "SELL_2": {
+    "n": 898,
+    "raw_pct": -0.418,
+    "edge_pct": -2.06,
+    "t_vs_single": -0.784
+  },
+  "SELL_3+": {
+    "n": 758,
+    "raw_pct": 0.719,
+    "edge_pct": -1.286,
+    "t_vs_single": 1.023
+  }
+}

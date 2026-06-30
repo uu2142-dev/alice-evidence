@@ -1,0 +1,552 @@
+{
+  "naive": {
+    "history": [
+      {
+        "gen": 0,
+        "train_best": 0.315,
+        "test_best": -0.016,
+        "test_top5": 0.036,
+        "mean_nodes": 31.0,
+        "attr_f0": 0.063,
+        "attr_decoys": 0.937
+      },
+      {
+        "gen": 1,
+        "train_best": 0.319,
+        "test_best": 0.055,
+        "test_top5": 0.012,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 2,
+        "train_best": 0.371,
+        "test_best": 0.054,
+        "test_top5": 0.064,
+        "mean_nodes": 31.3,
+        "attr_f0": 0.047,
+        "attr_decoys": 0.953
+      },
+      {
+        "gen": 3,
+        "train_best": 0.437,
+        "test_best": 0.049,
+        "test_top5": 0.05,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 4,
+        "train_best": 0.437,
+        "test_best": 0.049,
+        "test_top5": 0.049,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 5,
+        "train_best": 0.437,
+        "test_best": 0.049,
+        "test_top5": 0.057,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 6,
+        "train_best": 0.453,
+        "test_best": 0.052,
+        "test_top5": 0.048,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 7,
+        "train_best": 0.465,
+        "test_best": 0.053,
+        "test_top5": 0.047,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 8,
+        "train_best": 0.467,
+        "test_best": 0.043,
+        "test_top5": 0.041,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 9,
+        "train_best": 0.475,
+        "test_best": 0.037,
+        "test_top5": 0.041,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 10,
+        "train_best": 0.521,
+        "test_best": 0.023,
+        "test_top5": 0.028,
+        "mean_nodes": 31.5,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 11,
+        "train_best": 0.521,
+        "test_best": 0.023,
+        "test_top5": 0.028,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 12,
+        "train_best": 0.521,
+        "test_best": 0.023,
+        "test_top5": 0.03,
+        "mean_nodes": 31.7,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 13,
+        "train_best": 0.521,
+        "test_best": 0.023,
+        "test_top5": 0.029,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 14,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.03,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 15,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.048,
+        "mean_nodes": 31.7,
+        "attr_f0": 0.025,
+        "attr_decoys": 0.975
+      },
+      {
+        "gen": 16,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.051,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.025,
+        "attr_decoys": 0.975
+      },
+      {
+        "gen": 17,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.05,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.03,
+        "attr_decoys": 0.97
+      },
+      {
+        "gen": 18,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.051,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.032,
+        "attr_decoys": 0.968
+      },
+      {
+        "gen": 19,
+        "train_best": 0.53,
+        "test_best": 0.051,
+        "test_top5": 0.05,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.025,
+        "attr_decoys": 0.975
+      },
+      {
+        "gen": 20,
+        "train_best": 0.536,
+        "test_best": 0.127,
+        "test_top5": 0.085,
+        "mean_nodes": 31.7,
+        "attr_f0": 0.072,
+        "attr_decoys": 0.928
+      },
+      {
+        "gen": 21,
+        "train_best": 0.536,
+        "test_best": 0.127,
+        "test_top5": 0.087,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.077,
+        "attr_decoys": 0.923
+      },
+      {
+        "gen": 22,
+        "train_best": 0.537,
+        "test_best": 0.097,
+        "test_top5": 0.113,
+        "mean_nodes": 31.7,
+        "attr_f0": 0.11,
+        "attr_decoys": 0.89
+      },
+      {
+        "gen": 23,
+        "train_best": 0.537,
+        "test_best": 0.097,
+        "test_top5": 0.106,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.108,
+        "attr_decoys": 0.892
+      },
+      {
+        "gen": 24,
+        "train_best": 0.556,
+        "test_best": 0.149,
+        "test_top5": 0.122,
+        "mean_nodes": 31.4,
+        "attr_f0": 0.131,
+        "attr_decoys": 0.869
+      },
+      {
+        "gen": 25,
+        "train_best": 0.572,
+        "test_best": 0.184,
+        "test_top5": 0.141,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.149,
+        "attr_decoys": 0.851
+      },
+      {
+        "gen": 26,
+        "train_best": 0.59,
+        "test_best": 0.153,
+        "test_top5": 0.149,
+        "mean_nodes": 31.5,
+        "attr_f0": 0.166,
+        "attr_decoys": 0.834
+      },
+      {
+        "gen": 27,
+        "train_best": 0.59,
+        "test_best": 0.153,
+        "test_top5": 0.147,
+        "mean_nodes": 31.5,
+        "attr_f0": 0.163,
+        "attr_decoys": 0.837
+      },
+      {
+        "gen": 28,
+        "train_best": 0.606,
+        "test_best": 0.197,
+        "test_top5": 0.174,
+        "mean_nodes": 31.4,
+        "attr_f0": 0.201,
+        "attr_decoys": 0.799
+      },
+      {
+        "gen": 29,
+        "train_best": 0.611,
+        "test_best": 0.154,
+        "test_top5": 0.169,
+        "mean_nodes": 31.5,
+        "attr_f0": 0.19,
+        "attr_decoys": 0.81
+      }
+    ],
+    "lineage_root": "13b2545f8fef4dabb5595f56f9af039ddb3e3f6e1759753013398119f2dabd3e"
+  },
+  "gated": {
+    "history": [
+      {
+        "gen": 0,
+        "train_best": -0.111,
+        "test_best": -0.032,
+        "test_top5": -0.009,
+        "mean_nodes": 31.0,
+        "attr_f0": 0.009,
+        "attr_decoys": 0.991
+      },
+      {
+        "gen": 1,
+        "train_best": -0.082,
+        "test_best": 0.022,
+        "test_top5": -0.005,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.034,
+        "attr_decoys": 0.966
+      },
+      {
+        "gen": 2,
+        "train_best": -0.028,
+        "test_best": 0.023,
+        "test_top5": 0.01,
+        "mean_nodes": 31.3,
+        "attr_f0": 0.008,
+        "attr_decoys": 0.992
+      },
+      {
+        "gen": 3,
+        "train_best": -0.136,
+        "test_best": -0.027,
+        "test_top5": -0.024,
+        "mean_nodes": 31.4,
+        "attr_f0": 0.018,
+        "attr_decoys": 0.982
+      },
+      {
+        "gen": 4,
+        "train_best": -0.059,
+        "test_best": -0.023,
+        "test_top5": -0.006,
+        "mean_nodes": 31.4,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 5,
+        "train_best": -0.163,
+        "test_best": 0.017,
+        "test_top5": 0.004,
+        "mean_nodes": 31.4,
+        "attr_f0": 0.017,
+        "attr_decoys": 0.983
+      },
+      {
+        "gen": 6,
+        "train_best": 0.017,
+        "test_best": 0.013,
+        "test_top5": 0.001,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 7,
+        "train_best": -0.003,
+        "test_best": -0.037,
+        "test_top5": -0.023,
+        "mean_nodes": 32.5,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 8,
+        "train_best": -0.003,
+        "test_best": -0.037,
+        "test_top5": -0.013,
+        "mean_nodes": 32.0,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 9,
+        "train_best": -0.049,
+        "test_best": -0.006,
+        "test_top5": -0.002,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.029,
+        "attr_decoys": 0.971
+      },
+      {
+        "gen": 10,
+        "train_best": -0.012,
+        "test_best": 0.105,
+        "test_top5": 0.047,
+        "mean_nodes": 32.5,
+        "attr_f0": 0.07,
+        "attr_decoys": 0.93
+      },
+      {
+        "gen": 11,
+        "train_best": 0.031,
+        "test_best": -0.022,
+        "test_top5": -0.021,
+        "mean_nodes": 32.1,
+        "attr_f0": 0.0,
+        "attr_decoys": 1.0
+      },
+      {
+        "gen": 12,
+        "train_best": 0.111,
+        "test_best": 0.167,
+        "test_top5": 0.038,
+        "mean_nodes": 32.5,
+        "attr_f0": 0.073,
+        "attr_decoys": 0.927
+      },
+      {
+        "gen": 13,
+        "train_best": 0.137,
+        "test_best": 0.117,
+        "test_top5": 0.042,
+        "mean_nodes": 32.1,
+        "attr_f0": 0.077,
+        "attr_decoys": 0.923
+      },
+      {
+        "gen": 14,
+        "train_best": 0.161,
+        "test_best": 0.185,
+        "test_top5": 0.14,
+        "mean_nodes": 32.2,
+        "attr_f0": 0.194,
+        "attr_decoys": 0.806
+      },
+      {
+        "gen": 15,
+        "train_best": 0.018,
+        "test_best": 0.147,
+        "test_top5": 0.163,
+        "mean_nodes": 31.1,
+        "attr_f0": 0.272,
+        "attr_decoys": 0.728
+      },
+      {
+        "gen": 16,
+        "train_best": 0.115,
+        "test_best": 0.134,
+        "test_top5": 0.146,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.272,
+        "attr_decoys": 0.728
+      },
+      {
+        "gen": 17,
+        "train_best": 0.191,
+        "test_best": 0.213,
+        "test_top5": 0.184,
+        "mean_nodes": 31.2,
+        "attr_f0": 0.304,
+        "attr_decoys": 0.696
+      },
+      {
+        "gen": 18,
+        "train_best": 0.261,
+        "test_best": 0.206,
+        "test_top5": 0.192,
+        "mean_nodes": 31.3,
+        "attr_f0": 0.324,
+        "attr_decoys": 0.676
+      },
+      {
+        "gen": 19,
+        "train_best": 0.089,
+        "test_best": 0.227,
+        "test_top5": 0.167,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.277,
+        "attr_decoys": 0.723
+      },
+      {
+        "gen": 20,
+        "train_best": 0.368,
+        "test_best": 0.224,
+        "test_top5": 0.181,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.296,
+        "attr_decoys": 0.704
+      },
+      {
+        "gen": 21,
+        "train_best": 0.24,
+        "test_best": 0.196,
+        "test_top5": 0.209,
+        "mean_nodes": 31.6,
+        "attr_f0": 0.339,
+        "attr_decoys": 0.661
+      },
+      {
+        "gen": 22,
+        "train_best": 0.052,
+        "test_best": 0.168,
+        "test_top5": 0.217,
+        "mean_nodes": 31.8,
+        "attr_f0": 0.389,
+        "attr_decoys": 0.611
+      },
+      {
+        "gen": 23,
+        "train_best": 0.291,
+        "test_best": 0.219,
+        "test_top5": 0.201,
+        "mean_nodes": 32.0,
+        "attr_f0": 0.341,
+        "attr_decoys": 0.659
+      },
+      {
+        "gen": 24,
+        "train_best": 0.107,
+        "test_best": 0.172,
+        "test_top5": 0.197,
+        "mean_nodes": 32.4,
+        "attr_f0": 0.346,
+        "attr_decoys": 0.654
+      },
+      {
+        "gen": 25,
+        "train_best": 0.304,
+        "test_best": 0.243,
+        "test_top5": 0.22,
+        "mean_nodes": 32.3,
+        "attr_f0": 0.322,
+        "attr_decoys": 0.678
+      },
+      {
+        "gen": 26,
+        "train_best": 0.223,
+        "test_best": 0.239,
+        "test_top5": 0.209,
+        "mean_nodes": 32.4,
+        "attr_f0": 0.31,
+        "attr_decoys": 0.69
+      },
+      {
+        "gen": 27,
+        "train_best": 0.214,
+        "test_best": 0.21,
+        "test_top5": 0.21,
+        "mean_nodes": 32.6,
+        "attr_f0": 0.361,
+        "attr_decoys": 0.639
+      },
+      {
+        "gen": 28,
+        "train_best": 0.008,
+        "test_best": 0.19,
+        "test_top5": 0.221,
+        "mean_nodes": 32.5,
+        "attr_f0": 0.364,
+        "attr_decoys": 0.636
+      },
+      {
+        "gen": 29,
+        "train_best": 0.227,
+        "test_best": 0.247,
+        "test_top5": 0.23,
+        "mean_nodes": 32.3,
+        "attr_f0": 0.393,
+        "attr_decoys": 0.607
+      }
+    ],
+    "lineage_root": "a088aeb727a748287453cb3c79f65bcac135e0d141c552007211b2e77997dcb7"
+  }
+}
