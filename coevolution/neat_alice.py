@@ -3,6 +3,14 @@ neat_alice.py  —  ALICE NEAT Engine v1.0
 =========================================
 Sector Specialist Evolution for Political Signal Trading
 
+The evolutionary mechanics here are an independent implementation of NEAT
+(NeuroEvolution of Augmenting Topologies) — Kenneth O. Stanley & Risto
+Miikkulainen, "Evolving Neural Networks through Augmenting Topologies,"
+Evolutionary Computation 10(2), 2002. Historical marking, speciation, and
+complexification are theirs; the fitness landscape below is not. This work
+exists because they published openly, which is the reason this repository is
+MIT-licensed and its failures are published alongside its results.
+
 Adapted from RHAI/OND NEAT Fast architecture.
 CLEAN SLATE: no OND trained weights imported — zero artifact risk.
 Only the evolutionary mechanics port over; the entire fitness landscape
