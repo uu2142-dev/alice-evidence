@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Sealed session exports are cryptographic evidence: they must arrive on every
+# clone byte-for-byte as exported, on every platform. Disable EOL normalization
+# here — a CRLF rewrite would alter the bytes a third party re-hashes.
+sessions/*.json -text

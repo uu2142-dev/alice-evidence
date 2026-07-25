@@ -23,6 +23,7 @@ falsehood — whatever its source, including its own creator.*
 | The gate drives co-evolution and resists Goodhart | `coevolution/` — controlled, planted-ground-truth NEAT experiment (gate beats naive in **6/8** seeds) |
 | Memory is tamper-evident, independently verifiable, correctable-not-erasable | `memory/archivist.py`, `memory/verify_chain.py` — re-hashing a past entry still breaks the chain at the next link |
 | "Five models propose, the gate disposes" | `verum/verum_orient.py`, `verum/verum_gate.py` |
+| Sealed sessions are re-verifiable by a third party, **including the readable text** | `sessions/` + `memory/verify_session.py` — pure stdlib (Ed25519 from RFC 8032, no deps, no network); run it against the published NDAA §219 sessions |
 
 ## The falsification record (honest verdicts)
 Seven progressively-rigorous financial backtests, all reproducible here:
@@ -38,6 +39,7 @@ Seven progressively-rigorous financial backtests, all reproducible here:
 cp .env.example .env          # fill in keys; NEVER commit .env
 pip install requests scikit-learn numpy beautifulsoup4   # (+ torch sentence-transformers datasets for the detector tests)
 
+python memory/verify_session.py sessions/*.json   # no deps, no network, no keys — start here
 python memory/archivist.py                 # selftest: clean chain verifies; tamper detected even when re-hashed
 python gate/bias_dualuse_eval.py           # held-out toxicity + bias AUROC (leakage-free)
 python coevolution/coevo_multiseed.py      # gate vs naive across seeds (Goodhart resistance)
@@ -45,6 +47,20 @@ python financial_falsification/backtest_ond_definitive.py   # the well-powered n
 ```
 Don't want to re-run the financial fetches? The sealed outputs are in
 `financial_falsification/results/`.
+
+## A gap we found in our own verification instructions
+
+An Ed25519 signature over a Merkle root proves *the root* was sealed by the gate at that time.
+It does **not**, by itself, prove the human-readable transcript printed beside it is what
+produced that root. Against the published sessions in `sessions/`, changing three words inside
+a sealed response — leaving every hash and signature untouched — still passes the Merkle check,
+the chain check, and the signature check. Only recomputing the content leaves from the visible
+text catches it.
+
+The export's `verify` field previously described the first three checks and claimed they proved
+the exchange was "not altered since." That was an overclaim. It now documents the leaf preimage
+format so any third party can perform the fourth check, and `memory/verify_session.py` is the
+reference implementation. Published rather than quietly patched — see `sessions/README.md`.
 
 ## Honest limits (stated, not hidden)
 - The **knowledge gate** validates against *multi-model adversarial consensus*, **not external
@@ -58,6 +74,7 @@ Don't want to re-run the financial fetches? The sealed outputs are in
 ## Structure
 ```
 article/                 the alignment article + defense brief
+sessions/                sealed NDAA §219 sessions + the 4-check verifier's expected output
 gate/                    anti-data gate: validated detector + gated knowledge ingestion
 coevolution/             controlled NEAT co-evolution (gate as fitness landscape)
 financial_falsification/ the gate killing false positives (backtests + sealed results)

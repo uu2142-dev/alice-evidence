@@ -1,0 +1,384 @@
+{
+  "format": "verum-frontier-sealed-session/v1",
+  "site": "rabbitholeai.ai",
+  "startedAt": "2026-07-23T17:49:40.351Z",
+  "exportedAt": "2026-07-23T17:58:44.288Z",
+  "exchanges": [
+    {
+      "query": "Please analize section 622 intelligence sharing and provide a detailed report as well.",
+      "response": "**INTELLIGENCE BRIEFING**\n\n**Subject:** Analysis of Section 622 (United States-Israel Intelligence Sharing Enhancement) of the Proposed Intelligence Authorization Act for Fiscal Year 2027 (S. 4615)\n\n**Prepared for:** Inter-agency Council (Defense, State, ODNI, DHS, Treasury) – 23 July 2026\n\n---\n\n### 1. Executive Summary\n\nSection 622 (also referred to as Section 619 in some discussions) of the proposed Intelligence Authorization Act for Fiscal Year 2027, introduced by Senator Tom Cotton, mandates a significant expansion and enhancement of intelligence sharing between the United States and Israel. This provision would statutorily require the President, acting through the Director of National Intelligence and, when necessary, the Secretary of Defense, to broaden intelligence cooperation across a wide array of critical security domains. Crucially, it would severely limit the executive branch's flexibility to suspend, reduce, or materially limit this intelligence sharing, requiring a specific presidential national security finding and a detailed report to Congress within 15 days for any such action. The section also aims to integrate Israel into regional defense architectures and expand cooperation with Abraham Accords signatories. While proponents argue it strengthens a key strategic alliance, critics raise concerns about executive authority, counterintelligence risks, and potential entanglement in Israeli actions.\n\n### 2. Key Provisions of Section 622\n\n*   **Mandated Expansion of Intelligence Sharing:** Section 622 explicitly directs the President, through the Director of National Intelligence and the Secretary of Defense, to \"expand and enhance intelligence sharing\" with the Government of Israel.\n*   **Broad Scope of Intelligence:** The intelligence to be shared encompasses a wide range of critical areas, including:\n    *   Cybersecurity threats\n    *   Terrorism\n    *   Sanctions evasion\n    *   Plans and intentions of state and non-state actors\n    *   Adversarial technology proliferation\n    *   Missile threats (including ballistic and cruise missiles)\n    *   Unmanned aerial systems (UAS)\n    *   Air and space domain awareness\n    *   Other aerial threats relevant to the defense of Israel, U.S. forces and interests in the region, and regional security partners\n*   **Restrictions on Limiting Intelligence Sharing:** The provision significantly curtails the President's discretion to suspend, reduce, or materially limit intelligence sharing with Israel. Such actions are prohibited \"except on the basis of a specific and identifiable national security concern determined by the President.\"\n*   **Congressional Notification Requirement:** If the President determines a reduction or suspension is necessary, a detailed report must be submitted to Congress within 15 days. This report must cover the specific national security concern, the categories of information withheld, and the anticipated impact on regional security.\n*   **Regional Integration and Abraham Accords:** The amendment also directs expanded intelligence sharing and analytic cooperation with countries that normalized relations with Israel under the Abraham Accords. Priority areas for this broader regional cooperation include counterterrorism, cybersecurity, missile-defense warning, geospatial intelligence, maritime security, and sanctions enforcement.\n*   **Annual Reporting Requirements:** For five years, the President is required to submit annual reports to Congress. These reports must describe intelligence sharing with Israel and regional partners, evaluate progress toward integrating Israel into regional air- and missile-defense architectures, improve interoperability among U.S., Israeli, and partner-country technology networks, secure those networks against cyber threats, and identify barriers to deeper intelligence integration.\n*   **Amendment to National Security Act of 1947:** Section 622 would amend the National Security Act of 1947 by adding Section 1115, specifically governing intelligence sharing with Israel.\n\n### 3. Analysis of Risks and Benefits to US Interests and Sovereignty\n\n#### Benefits:\n\n*   **Enhanced Strategic Alliance:** Codifying and expanding intelligence sharing reinforces the long-standing strategic alliance between the U.S. and Israel, potentially leading to improved coordination on shared threats in the Middle East.\n*   **Improved Regional Security:** The expanded sharing, particularly concerning terrorism, missile threats, and adversarial technologies, could enhance the collective security of the U.S., Israel, and regional partners, especially Abraham Accords signatories. This includes efforts to integrate Israel into regional air- and missile-defense architectures.\n*   **Counterterrorism and Cybersecurity:** Deeper cooperation in these areas could provide the U.S. with valuable intelligence and capabilities to combat global terrorism and defend against cyberattacks.\n*   **Deterrence of Adversaries:** A more integrated intelligence posture could present a stronger deterrent to state and non-state actors hostile to U.S. and Israeli interests in the region.\n\n#### Risks:\n\n*   **Erosion of Executive Authority:** The provision significantly limits the President's inherent flexibility and discretion in managing sensitive intelligence relationships, effectively \"locking\" intelligence sharing into statute. This could politicize intelligence decisions and make it difficult for future administrations to adapt to changing geopolitical realities or national security concerns without substantial political cost.\n*   **Counterintelligence Exposure:** Mandating intelligence sharing, especially at the highest levels of sensitivity, increases the risk of counterintelligence exposure and potential compromise of U.S. sources and methods. The Director of National Intelligence (DNI) would lose routine flexibility to calibrate sharing against such exposure.\n*   **Lack of Reciprocity and Human Rights Stipulations:** Unlike some other intelligence sharing agreements (e.g., with Ukraine), Section 622 does not appear to include explicit reciprocity requirements or provisions for suspending sharing in cases of human rights violations or violations of the law of armed conflict by the recipient. This could lead to perceptions of an imbalanced relationship and potential U.S. complicity in actions that run counter to U.S. values.\n*   **Entanglement in Foreign Policy:** The mandated sharing and the difficulty of suspension could entangle the U.S. more deeply in Israeli foreign policy and military actions, potentially making the U.S. implicitly responsible or blamed for certain Israeli operations, even if not directly involved.\n*   **Politicization of Intelligence:** Shifting the decision-making power from the executive branch and intelligence community to a statutorily mandated framework, with significant congressional oversight on any suspension, could politicize intelligence relationships and make them subject to legislative lobbying and political pressures.\n*   **Sovereignty Concerns:** Critics argue that permanently sharing the most sensitive information with a foreign country, and limiting the President's ability to restrict it, threatens U.S. sovereignty by compromising the integrity and independent management of national intelligence services.\n*   **\"Bait\" for Normalization:** The provision's use of U.S. intelligence as an incentive for other nations to normalize relations with Israel could be seen as commodifying intelligence and potentially creating dependencies that are not solely based on U.S. national security interests.",
+      "model": "gemini-2.5-flash",
+      "receipt": {
+        "priceSheetDate": "2026-07-14",
+        "model": "gemini-2.5-flash",
+        "rates": {
+          "inPerM": 0.3,
+          "outPerM": 2.5
+        },
+        "usage": {
+          "inputTokens": 1101,
+          "outputTokens": 2169
+        },
+        "directUsd": 0.0057528,
+        "groundingUsd": 0.035,
+        "infraUsd": 0.00203764,
+        "supportUsd": 0.00611292,
+        "supportSplit": {
+          "server": 0.001833876,
+          "development": 0.002445168,
+          "steward": 0.001222584,
+          "reserve": 0.000611292
+        },
+        "totalUsd": 0.04890336,
+        "chargedUsd": 0.048904,
+        "tier": "credits"
+      },
+      "biasScreen": {
+        "version": "bias_v1",
+        "toxicity": 0.0297,
+        "toxicityPctile": 45,
+        "framing": 0.1042,
+        "framingPctile": 45,
+        "validated": {
+          "toxicityAuroc5fold": 0.9243,
+          "framingAurocOfficialSplit": 0.8423
+        },
+        "scope": "Triage signals for toxicity and media/framing STYLE. Not a truth, accuracy, or hallucination detector."
+      },
+      "grounded": true,
+      "grounding": {
+        "sources": [
+          {
+            "title": "military.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiNez9vfpK6dCoFYPr0ia-gNccO3_Xy6XlrTIo-F_58t0gGePwiPtubQ_nZvJZAm7CY5f6Zy4b6sBM75lWTzvqAe6MgUSvI-4cuCN64zFSov4ySHGkTpM0tYMdOQIYj3VITJe3JPRvD7H8e8tjiBD8WUuFmkZtqwKnrB09Ih5utxdGUuBFBEsyoDMQUX9uhFsEje1BFUjCwgdT"
+          },
+          {
+            "title": "responsiblestatecraft.org",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDjAXXMvUBYmE7e2R7WYZ_lQcYpsCX0Sushm_lbNtKOr9HIPda_nolx6pbcrQSthZtMVYig4DtW9O-7Muzw9hRNA2_6ZUiQBFgN0G1xv3G8PtpY06TYWZkjQCmUAknnJNzxGOw6f7E5IqdomHUpn8oEE9d"
+          },
+          {
+            "title": "reddit.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw0w6y7W7iJDY-NO0jrotMnZv8pdDbv6pgzkI2ZOtgSmHoKT5Jy0SSTWKYulXQ4cTk6G0qJBE-rHQcrqqHGSoz3PJd6CzjY2iRhT5TU6f-Mt7_52AW4RttXxzNuGV2WLeKLds01wcW2e2YSR4AIUcFKP1viBvqQJOqspz9veWIGRE9o2PbLO6GAoHnZb-lNmLEN27oq2kqXiZu4EU="
+          },
+          {
+            "title": "independent.co.uk",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIj14y8KmNChIsPWJR5qK9HW6aZ3GWC9B9PcZaB2kgoH6Fk4v4Z51aD7n4Q2nFYaBFu2AFwH8UBrc1LxyLkhumzDDvbQuslex9KKBPg00wMgJ1klWBNjrzSu2gYX33s-_tc-NrKlW5nb944ICCZ_3b5Y2axiGlQFWoNBo3zifg9F92Nom71mgeCnuLE1JypBEHKk4ip3x3lSo5LPHelA2Xz-U="
+          },
+          {
+            "title": "anewpolicy.org",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjRt_hpK7aBbQNkYrhHQg5ugwZ6x-qa1eH89SnrbUePXGnZKGNfBP6vDrOCHsVzfIYynRPrUDdwVo75AG7rCe_fdrmIoM61euHk6SJrnpWUT07mU--hUX_lO0iuujcsaVbd3F7zW_ReOUKrLAM9HTSCnYWlv2e1GP_kA0LPSPjv_HymhwEN_-Y4lis2tE9a7LdCJVZHaJ76wVrf4efj-Dxk8GdokE8"
+          },
+          {
+            "title": "palestinechronicle.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFoJJbbpw2lhGqrpZgWhvdSwLITGLDCl4jEdoTeOrQ0c-DiHFKY3h2BByLLIXUhmfrnmzyE0VGd2ea_E2cC8rXOntPclgpljFMqe4rsqgMdNFoY4b9o_fZUTUsiH27ludHWfqrUiGE8qeW44eZSN1NjT_KFvMXIDa9ktZ-pM2Lp_agSdXI-qkWFM-oDlPZ3a6qnsGF7lrvcpK25S07FxXi_DQXN2AX4gL7Zg=="
+          }
+        ],
+        "searchQueries": [
+          "Section 622 intelligence sharing",
+          "National Defense Authorization Act Section 622 intelligence sharing",
+          "US intelligence sharing laws Section 622"
+        ]
+      },
+      "seal": {
+        "algo": "SHA-256",
+        "leaves": [
+          {
+            "label": "QUERY",
+            "sha256": "5829c35e3f5c66c8e2cd32a9df91610f490d4ce4b868856fba9ad7a5f4009a13"
+          },
+          {
+            "label": "RESPONSE",
+            "sha256": "493500f422b71ac14ac130632bc6a4280c23bee96442e640fbd7870296d5a60b"
+          },
+          {
+            "label": "SOURCES",
+            "sha256": "3ee6e5a01a010d603b7c46ad9be08915f77f6e5b28f0fb0196a45e3982d0bdcd"
+          },
+          {
+            "label": "RECEIPT",
+            "sha256": "240872cb4f77381a5116600762d25e9c6c35c26fa22bf2423e135d9397b408d9"
+          },
+          {
+            "label": "BIAS",
+            "sha256": "cbe117316218a31b692d8bb81374bac48257e87d2939fd6ef610ecba7175ae64"
+          },
+          {
+            "label": "MEMORY",
+            "sha256": "853124f859ad23d2f805afc22b2107197c9cdd6e8a867f9818662f4c4fd41301"
+          },
+          {
+            "label": "TIMING",
+            "sha256": "12a31cf20f275a4590bd969cf7a3d3e6805ab5047954db7bcc5680d625786ded"
+          }
+        ],
+        "root": "6c183b05d6361525e13408b48accb45b247be1b7cc95744d4a2d293016911298",
+        "sealedAt": "2026-07-23T17:50:03.802Z",
+        "sig": {
+          "alg": "Ed25519",
+          "keyId": "8b4d8aa466c356e6",
+          "signature": "76WBbtfJM+gRK/lyLjxNFTdmRc7wTSR0EUNtAPhwDyz08WlrB1wNJGiRkm27eqg2vnrgjYZrbBw3lFUSNyUCAg=="
+        }
+      },
+      "timingMs": {
+        "total": 13891,
+        "llm": 12962
+      },
+      "sessionChainHash": "f6cc5b5f355616838f373833f3a41bf73ef3ba1fa6825767adabf79f02e0da02"
+    },
+    {
+      "query": "Explore DIA Israeli Counterintelligence reports and provide a detailed brief please.",
+      "response": "I cannot provide a detailed brief on DIA Israeli Counterintelligence reports. Such reports, if they exist, would be highly classified and not publicly available.\n\nCounterintelligence operations and reports involve extremely sensitive information, including sources, methods, and assessments of foreign intelligence capabilities and activities. Disclosing such details would severely compromise national security, intelligence operations, and the safety of personnel involved. Therefore, this type of information is strictly protected and not accessible to the public or through open-source intelligence.",
+      "model": "gemini-2.5-flash",
+      "receipt": {
+        "priceSheetDate": "2026-07-14",
+        "model": "gemini-2.5-flash",
+        "rates": {
+          "inPerM": 0.3,
+          "outPerM": 2.5
+        },
+        "usage": {
+          "inputTokens": 2549,
+          "outputTokens": 222
+        },
+        "directUsd": 0.0013197,
+        "groundingUsd": 0.035,
+        "infraUsd": 0.001815985,
+        "supportUsd": 0.005447955,
+        "supportSplit": {
+          "server": 0.001634386,
+          "development": 0.002179182,
+          "steward": 0.001089591,
+          "reserve": 0.000544795
+        },
+        "totalUsd": 0.04358364,
+        "chargedUsd": 0.043584,
+        "tier": "credits"
+      },
+      "biasScreen": {
+        "version": "bias_v1",
+        "toxicity": 0.008,
+        "toxicityPctile": 34,
+        "framing": 0.0026,
+        "framingPctile": 21,
+        "validated": {
+          "toxicityAuroc5fold": 0.9243,
+          "framingAurocOfficialSplit": 0.8423
+        },
+        "scope": "Triage signals for toxicity and media/framing STYLE. Not a truth, accuracy, or hallucination detector."
+      },
+      "grounded": true,
+      "grounding": {
+        "sources": [],
+        "searchQueries": []
+      },
+      "seal": {
+        "algo": "SHA-256",
+        "leaves": [
+          {
+            "label": "QUERY",
+            "sha256": "d0c6c729cdaa3beac333c38f23edce48151c1298fe41006f2ea1bfe77e82e2c4"
+          },
+          {
+            "label": "RESPONSE",
+            "sha256": "ff8ecaec3c4a4738b96ad4a7170fc878f98f4f37540354e9bbdb7382af5dd79a"
+          },
+          {
+            "label": "SOURCES",
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "label": "RECEIPT",
+            "sha256": "29d556c63114107701a2073862d07a1141cdbcabca32099bc03ddd6af222eb99"
+          },
+          {
+            "label": "BIAS",
+            "sha256": "bb3e7d804e9e433d28cc4c6542d6226ef0562b2e6456ca42ec2852f4cf369f92"
+          },
+          {
+            "label": "MEMORY",
+            "sha256": "853124f859ad23d2f805afc22b2107197c9cdd6e8a867f9818662f4c4fd41301"
+          },
+          {
+            "label": "TIMING",
+            "sha256": "e25af692c9b525edf025486bbce30bef783e80dd15a66936643f4bf46e4e8ae9"
+          }
+        ],
+        "root": "c4df0e00bd2ec417f476c06bbbb4b05e33efe9eaa1fb879ae2bedf1ff429f2b1",
+        "sealedAt": "2026-07-23T17:55:50.234Z",
+        "sig": {
+          "alg": "Ed25519",
+          "keyId": "8b4d8aa466c356e6",
+          "signature": "FSJeXiArwsDhQK8+1AO4l2bolkdQo1pmMj1fhvATyqw6fH/Pal/FBnuIuc+L50kJD+VQytZN9jtW30Cy+ZDzAw=="
+        }
+      },
+      "timingMs": {
+        "total": 2539,
+        "llm": 1911
+      },
+      "sessionChainHash": "8e6afea8a108a3fc306d7ecbbb81c26db4ca20d408db5d61a53814081a34c912"
+    },
+    {
+      "query": "Any OSINT on this topic?",
+      "response": "While specific, classified \"DIA Israeli Counterintelligence reports\" are not publicly available, Open Source Intelligence (OSINT) reveals significant public discussion and reporting on the Defense Intelligence Agency's (DIA) counterintelligence concerns regarding Israel.\n\nHere's a detailed brief based on OSINT:\n\n### **OSINT Brief: DIA Counterintelligence Concerns Regarding Israel**\n\n**1. DIA's Counterintelligence Mission:**\nThe Defense Intelligence Agency (DIA) maintains a robust counterintelligence (CI) capability. Officers in the CI career field are tasked with safeguarding the nation from foreign adversarial threats by detecting, identifying, assessing, exploiting, countering, and neutralizing damaging efforts by foreign entities, including sabotage and espionage.\n\n**2. Elevated Threat Level:**\nMultiple news outlets reported in June 2026 that the Pentagon's Defense Intelligence Agency (DIA) recently raised Israel's counterintelligence threat level from \"high\" to \"critical,\" which is the highest possible designation. This assessment was reportedly circulated in an internal notice.\n\n**3. Reasons for Heightened Concern:**\nThe elevation of the threat level is reportedly driven by concerns that Israeli intelligence services have intensified efforts to collect information on senior U.S. officials and internal American deliberations. Specific areas of interest for Israeli intelligence are believed to include U.S. positions and strategies concerning the war with Iran and broader Middle East conflicts.\n\nReports cite:\n*   Increased Israeli surveillance of senior U.S. officials, including President Donald Trump's chief negotiator Steve Witkoff and Pentagon policy chief Elbridge A. Colby.\n*   Incidents where U.S. defense personnel in Israel discovered secretly installed software on their phones, allegedly capable of intercepting communications.\n*   Past incidents, reportedly in 2021, where Israeli military intelligence officers were allegedly caught planting listening devices at U.S. Defense Intelligence headquarters, and in 2025, where officers from Israel's domestic intelligence agency, Shin Bet, reportedly attempted to plant a listening device in a Secret Service vehicle.\n\n**4. Nature of the DIA Assessment:**\nThe DIA's assessment reportedly includes a seven-page document that details specific incidents contributing to U.S. concerns. This document assesses Israel's capabilities in both human intelligence and technical information collection as being at a \"critical level.\"\n\n**5. Context within US-Israel Relations:**\nThese counterintelligence concerns have emerged amidst a period of close military cooperation between the U.S. and Israel, particularly in their war against Iran. However, they also coincide with reported tensions between U.S. President Donald Trump and Israeli Prime Minister Benjamin Netanyahu over the direction of the war with Iran and Israeli military operations in Lebanon.\n\n**6. Official Responses and Implications:**\n*   The White House has reportedly dismissed some of these claims as false.\n*   The Israeli Embassy in Washington has denied allegations of spying on U.S. officials or entities, stating that Israel's intelligence efforts are directed at its enemies, not its allies.\n*   The Pentagon has largely declined to comment on the reports.\n\nDespite the close intelligence cooperation, U.S. officials reportedly believe Israel now poses a greater counterintelligence concern than any other U.S. ally and even some adversaries. This situation could complicate further military integration and information-sharing, with American personnel already expected to apply stricter security precautions when dealing with Israeli counterparts.",
+      "model": "gemini-2.5-flash",
+      "receipt": {
+        "priceSheetDate": "2026-07-14",
+        "model": "gemini-2.5-flash",
+        "rates": {
+          "inPerM": 0.3,
+          "outPerM": 2.5
+        },
+        "usage": {
+          "inputTokens": 2691,
+          "outputTokens": 1903
+        },
+        "directUsd": 0.0055648,
+        "groundingUsd": 0.035,
+        "infraUsd": 0.00202824,
+        "supportUsd": 0.00608472,
+        "supportSplit": {
+          "server": 0.001825416,
+          "development": 0.002433888,
+          "steward": 0.001216944,
+          "reserve": 0.000608472
+        },
+        "totalUsd": 0.04867776,
+        "chargedUsd": 0.048678,
+        "tier": "credits"
+      },
+      "biasScreen": {
+        "version": "bias_v1",
+        "toxicity": 0.33,
+        "toxicityPctile": 50,
+        "framing": 0.1043,
+        "framingPctile": 45,
+        "validated": {
+          "toxicityAuroc5fold": 0.9243,
+          "framingAurocOfficialSplit": 0.8423
+        },
+        "scope": "Triage signals for toxicity and media/framing STYLE. Not a truth, accuracy, or hallucination detector."
+      },
+      "grounded": true,
+      "grounding": {
+        "sources": [
+          {
+            "title": "dia.mil",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGY_5TvnUypjvtoKYcJWTIpUtkCWiH6YJ5BqpLfzTD8tg9GXvJqz1jyOTbQsMP5nKqDJs-ddNilfCsfBTlNaLIhKVhAqFiAB5VqR4lN0VnSk1-2a5p9exVYJ3atW-ld8K68DUMeMlejjZtQAJAnf3knOprPXIBOzr8="
+          },
+          {
+            "title": "dia.mil",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHF1mUpO8PaHhdf9h4gBMkfyc6U67ZSo392NKZzJq_kfUCm1iTUzjXY7_K59Sf58rN_L_lBaTWKREQPfk8e0fyx7LkLpvIk6Qa1CBd2uRoFlsRu8hHxqzqE14ys1crBDN1-LUtjZl8GebrnoZXM65mjYH-zhE8XnCtXVePG4DmNNcHscw=="
+          },
+          {
+            "title": "trtworld.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5BbMD856zUdMF6lGSsb5jK-yjcDXppueovfxXZNunyZdq11rZ-K5sRSOw4QsbVIxJuKWIH9qWYUS3oYZq84ZX67Hnh60zaYF4LFqXNpHGp6pHFd2uaqZh5tuQIBYRPH8LkaEDJjol"
+          },
+          {
+            "title": "aa.com.tr",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1E440ZNyJgZ4Epvsaa7JCLMNQ3jJMuZ79qhmJK8EIOctCLHXeWxvCqR5m0wet9BhmsgYq2V1gwxD2vlHNIlPs8LyyxVuZ4h-671XEuFGFF9r4by4WNY6AZ99zSwFwtcPxzwcpCunt2tD-FJbqaWPmQr25kXxwCuDx1pqIKbWg-G9XDLQ_q96KBBUAnmn1OZ99fo30mkAzaq0D3kpj5naIC0VJlzJCtsC8wyW-sw8uQX8="
+          },
+          {
+            "title": "i24news.tv",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6509yItb1MOxkgZ5KZ7Z7J9SdRpr8-hTnN-Hq0c9wtRE0QT2_NTACNKclahnBLN3DnRHaY25SCnmOcoX1y5zLDiKQL3gzEC4JNuFsGHtvpnP-wnWCj1PlMb024TeZ0zPZCOUqgtWr6s3UDxMNy7UapjSHFd07V8IcVOoqV63wTqCKOcAGqv0EyiVfeYc2eA2x58r8O6Gac7sp0zo-ArPRzgt8fUTd38gXg1QLXCUesJImomziEQOYKSXSFTDpYzsT"
+          },
+          {
+            "title": "ynetnews.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSLIA8qAbJVF-RIs5rq4uogclh-dtrp9ul6jsnJ4orEGXigGQLj3hFs_18HDPLSoQRxjXVSF1CRntzvDzw5KqoDQM4xO4a2wk0dZqlTCp4nm1wHQgt3ApjTXbFQHNy4hbtGfWkq-k="
+          },
+          {
+            "title": "turkiyetoday.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxOLcAu6BlXp6IBGCSNFKX5KaPyNC5pzOSUkYN0NiOQyoWSavYtiGBe_I_PhfSyM8p2Wiow4S-0PwEFpYkF8AazvtOA4z1jlMNd-2eb9cDX5TIkCUUPz3fykFBJzOwK1jBuLrgv0s9jbtCQ8maAQu5GF6qN3k2G8PoIJiWh07vQNhbyhMSTWppOt8lvFHuevTYYanRYKbNpOFdGFB8iwoYNhhmGFYXvwQgKQ=="
+          },
+          {
+            "title": "military.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZLaOR9PcTvn_yntT9XLwWYchhBn-TqeZx8CJol0L2_MrjWbgXSFyb_7cMTS-Zi7Hd30vKhZn21-g4bRTxeISzDQLmsOnWljteh3TOx1gaOPd6SMR8jo9VoVZxR_hlG3Pb64Bw53oLwp2cviq8BCTIPVMXUNfjd-OUyEPNiby_FPGwV5ssuY8RED8LkcFhuA37AySnokNZ"
+          },
+          {
+            "title": "aa.com.tr",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI-AXr9ucMnNfTwo9NAilpDg0Q-TNO0tVEwFYIZZGGcQHIWPY_hI3vjUKe3VaSFEZDVZavE6N_uw8yYd9k-IZQ1uX5JbfgBcvOCTNB0ys4u3yzrQdRJyHr8MmglspxVnxrYm-q2qrc81FTdOWRo2-NNa4ZGmp5qYOJ2KLCUEXjcwAswX2r2NPyP0_YAaeoYBEaUDeosfBK_ubT"
+          },
+          {
+            "title": "middleeasteye.net",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBGzQGwygVD5G6efdjAya_l-ed5C5KAqytcLZMun14qQCzFai4QsnI5SzH-QOIqHlJZgIBvuquIqZEEGnSV-GfIrHqGJ21suvVc99lN0TBlW3u4EMh0OJ9pY4G3ICyucAoDGDF7MYeKJ5eheoudsb3IW1ZghRiuJMoLqthRolCYHv6hDBCyBUPMG1LuVeRwCx4zm4rl4ZSZtQ6GwUESuobp5-vivDTyVPINzSmhQJ6Zq-1YDJA_g=="
+          },
+          {
+            "title": "unn.ua",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaFg7G7TKT6cs0ZUEnMrPd8igJx-JcYVopCm6riOa06CYVd_-2cgnNb5joH4RqxOpiNFqduT8McSNRAkORRr_KwdOdsMxzOrEW_kJNP0O9ecWPt-VHgaI1vJ9c15XXJmhJK1cANM96oC8YCFNnQu_GURxqPth5xgOkn7mgKskdlyB_x1WGrpiMUwbmom9SaH3GtDMhxSBwWXsIon4cQdMAsNIutQ=="
+          },
+          {
+            "title": "timesofisrael.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjxZ4kc9K_QpEsziVNE-LBvz1IP-wxrmBRMrF7qjr0r_8ab5t2uicCQw9rB-JmlC56PR3Y_oV5cSuVZbL5hdxJDXIgh1OfqdNB5zeh-I7lCiyWxxJeDiq5wk0hVBukjLg1fqx1YXbRCMgPH4P9qehjA2U-iexrFhajwNP3ayq4DFvscE76SmpKL-g85BJMbDrE88VdUZ9jCL5E6Mm_ovFWi3eUYZkimOTdkxc="
+          },
+          {
+            "title": "responsiblestatecraft.org",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESk8UrlpDv636QbFbRWqdtJwfAPFbAnMvp9uZd5uSjIIhYFlvqRukAKbrXk0vQjzwZUxtI__aA1y0U-eUMYkttb1VwUPmE3aPJ8NmvfY7OHevB1oC2hLI2pX6ipEwT8zivFxvZ48EJJthgDNwbaGQNELpm"
+          },
+          {
+            "title": "youtube.com",
+            "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCd9o7JGZQ15Ec9fc9Y9KfqSfxwgTazsZL4vHXiVeIMIX-phtUuCn5Q-O8pt8qmgapPtnDJjIsSJ-HJ2aNlec18PirSqmPeaJYXygg27ZNJ6w4wVg_1WUlsx-rcRwm8lziUvRnMg=="
+          }
+        ],
+        "searchQueries": [
+          "DIA counterintelligence Israel public information",
+          "US counterintelligence concerns Israel OSINT",
+          "public reports on US-Israel intelligence sharing risks",
+          "DIA counterintelligence mission statement",
+          "history of US counterintelligence regarding allies"
+        ]
+      },
+      "seal": {
+        "algo": "SHA-256",
+        "leaves": [
+          {
+            "label": "QUERY",
+            "sha256": "ea7844e3b3fc6a9fe421fad3ff4be0b0ebf4d40aad989e29a236b7708aa95453"
+          },
+          {
+            "label": "RESPONSE",
+            "sha256": "5783f7f8f62e2c8867328539ea06d7ddd656621c4cc395831e4668d85686b0b8"
+          },
+          {
+            "label": "SOURCES",
+            "sha256": "c61a3890ed70b726c12dfbfcd715c6f0d74ced903365df519f54b8959a30e9a9"
+          },
+          {
+            "label": "RECEIPT",
+            "sha256": "cc2369d74177b497785c070d3b161cfa6980db720f4b32ffdbecf5a77a536902"
+          },
+          {
+            "label": "BIAS",
+            "sha256": "57c1fc55566cadde06adf87c2814cc2e2df36c18af8b343fbb703d2c18076a85"
+          },
+          {
+            "label": "MEMORY",
+            "sha256": "86beee4efc454defe2635eba2f3614edfc5774babd3d1701be339d6ed78e934f"
+          },
+          {
+            "label": "TIMING",
+            "sha256": "48fbf622c6134761276f59269c089a2cf29fa0fb7149cce887fe6c099dbb62b6"
+          }
+        ],
+        "root": "81a5804675d4fbc1ad216cf588a8ca15387dca1895c43d1fe0a367d1e71aec40",
+        "sealedAt": "2026-07-23T17:56:31.696Z",
+        "sig": {
+          "alg": "Ed25519",
+          "keyId": "8b4d8aa466c356e6",
+          "signature": "KYS2ABLDE7FxEQJi4boIOrpOh7nRwS6C6lb8chGrqkJJLUyu8tRfTYLk8iGNTOrlFWqciFbI1rFmPCwin3kgCw=="
+        }
+      },
+      "timingMs": {
+        "total": 14308,
+        "llm": 13462
+      },
+      "sessionChainHash": "799022f06a0646beee878d840f87b4db876b443b28b4ec4e890e01c34c825ef0"
+    }
+  ],
+  "sessionChainRoot": "799022f06a0646beee878d840f87b4db876b443b28b4ec4e890e01c34c825ef0",
+  "sealPublicKey": {
+    "alg": "Ed25519",
+    "keyId": "8b4d8aa466c356e6",
+    "publicKeySpkiB64": "MCowBQYDK2VwAyEAHnJBSfHHo43BguvxJNAcLeu7NRX4mOgYkeXaLJqBnt4=",
+    "signedPayloadFormat": "VF-SEAL-v1|<merkleRootHex>|<sealedAtIso>"
+  },
+  "verify": "Leaves are SHA-256 hex digests produced server-side over the exchange (see seal.leaves labels). The Merkle root pairs leaves left-to-right, duplicating the last when odd, hashing hex-string concatenations. The session chain is SHA-256(prevChainHash + seal.root), genesis = SHA-256('VERUM_FRONTIER_SESSION_GENESIS' + startedAt). Any SHA-256 tool can re-verify. Where seal.sig is present, it is an Ed25519 signature over 'VF-SEAL-v1|<root>|<sealedAt>' by sealPublicKey — proving the exchange was sealed by rabbitholeai.ai and not altered since."
+}
