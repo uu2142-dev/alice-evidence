@@ -8,15 +8,41 @@ a third party can run this against an exported JSON and confirm, for every excha
   1. MERKLE   the seal's leaf digests recompute to the claimed root
   2. CHAIN    each exchange links to the previous one (genesis is derived from startedAt)
   3. ED25519  the root was signed by the published public key (origin-attestable)
-  4. CONTENT  the QUERY / RESPONSE text in the file recomputes to the sealed leaves
+  4. CONTENT  the readable text/data in the file recomputes to the sealed leaves —
+              QUERY, RESPONSE, RECEIPT, BIAS, SOURCES, MEMORY, TIMING
 
 (4) is the one that matters for "was this transcript altered after the fact" — a
 signature over a root only proves the root was sealed; it does not, by itself, bind
-the human-readable text you are reading to that root.
+the human-readable text you are reading to that root. This verifier recomputes every
+content leaf whose preimage is present in the export. DOCUMENT is the exception: the
+attachment's full text is deliberately not exported (it is yours), so a DOCUMENT leaf
+is verifiable only against your own copy of the file you attached, and is reported
+as 'na' here.
+
+Every leaf is SHA-256 over a preimage serialized exactly as the gate's JavaScript
+JSON.stringify would produce it: keys in the order given, no whitespace, non-ASCII
+left unescaped, hashed as UTF-8. The one place a naive json.dumps diverges from
+JSON.stringify is float formatting (e.g. 0.000002203 -> "0.000002203" in JS but
+"2.203e-06" in Python), so this file ships a faithful ECMAScript Number::toString.
 
 Usage:  python verify_session.py <export.json> [more.json ...]
 """
-import sys, json, hashlib, base64
+import sys, json, hashlib, base64, re
+
+# id -> providerModel. Public data mirrored from the model registry; the TIMING
+# leaf is hashed over the provider's model name, not the gate's display id.
+PROVIDER_MODEL = {
+    "llama-3.3-70b": "llama-3.3-70b-versatile",
+    "gpt-oss-120b": "openai/gpt-oss-120b",
+    "qwen3.6-27b": "qwen/qwen3.6-27b",
+    "gemini-2.5-flash": "gemini-2.5-flash",
+    "claude-opus-4.8": "claude-opus-4-8",
+    "claude-sonnet-5": "claude-sonnet-5",
+    "claude-haiku-4.5": "claude-haiku-4-5",
+    "claude-fable-5": "claude-fable-5",
+    "gpt-5.6-sol": "gpt-5.6-sol",
+    "grok-4.5": "grok-4.5",
+}
 
 # ─────────────────────────── Ed25519 (RFC 8032) verify ───────────────────────────
 q = 2**255 - 19
@@ -87,6 +113,60 @@ def ed25519_verify(pubkey32: bytes, msg: bytes, sig64: bytes) -> bool:
     h = int.from_bytes(hashlib.sha512(Rs + pubkey32 + msg).digest(), "little") % L
     return _eq(_mul(B, S), _add(R, _mul(A, h)))
 
+# ─────────────────── JS-faithful JSON serialization (for leaves) ──────────────────
+def js_number(x: float) -> str:
+    """ECMAScript Number::toString for the JSON-relevant range. Produces the exact
+    string JSON.stringify would, which Python's json.dumps does NOT for small/large
+    magnitudes (it goes exponential earlier and pads the exponent)."""
+    if x != x or x in (float("inf"), float("-inf")):
+        return "null"                     # JSON.stringify(NaN|Infinity) === null
+    if x == 0:
+        return "0"                        # JSON.stringify(-0) === "0"
+    if x < 0:
+        return "-" + js_number(-x)
+    if x == int(x) and abs(x) < 1e21:
+        return str(int(x))
+    r = repr(x)                           # shortest round-tripping digits (== JS digits)
+    if "e" in r or "E" in r:
+        mant, e = re.split("[eE]", r); e = int(e)
+    else:
+        mant, e = r, 0
+    ip, fp = (mant.split(".") + [""])[:2]
+    all_digits = ip + fp
+    stripped = all_digits.lstrip("0")
+    D = stripped.rstrip("0") or "0"       # significant digits, no leading/trailing zeros
+    trail = len(stripped) - len(D)
+    k = len(D)
+    n = k + trail + e - len(fp)           # decimal-point position (ECMAScript n)
+    if k <= n <= 21:
+        return D + "0" * (n - k)
+    if 0 < n <= 21:
+        return D[:n] + "." + D[n:]
+    if -6 < n <= 0:
+        return "0." + "0" * (-n) + D
+    ee = n - 1                            # exponential form
+    esign = "+" if ee >= 0 else "-"
+    body = D if k == 1 else D[0] + "." + D[1:]
+    return body + "e" + esign + str(abs(ee))
+
+def js_json(v) -> str:
+    """Reproduces JavaScript JSON.stringify(v) byte-for-byte for the value types that
+    appear in a sealed exchange (dict/list/str/int/float/bool/None). Strings reuse
+    json.dumps(ensure_ascii=False), whose escaping already matches JSON.stringify;
+    only float formatting is overridden."""
+    if v is True:  return "true"
+    if v is False: return "false"
+    if v is None:  return "null"
+    if isinstance(v, str):   return json.dumps(v, ensure_ascii=False)
+    if isinstance(v, bool):  return "true" if v else "false"   # (bool before int)
+    if isinstance(v, int):   return str(v)
+    if isinstance(v, float): return js_number(v)
+    if isinstance(v, list):  return "[" + ",".join(js_json(x) for x in v) + "]"
+    if isinstance(v, dict):
+        return "{" + ",".join(json.dumps(k, ensure_ascii=False) + ":" + js_json(val)
+                              for k, val in v.items()) + "}"
+    raise TypeError(f"cannot serialize {type(v).__name__}")
+
 # ─────────────────────────────── seal primitives ────────────────────────────────
 def sha256_hex(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
@@ -106,6 +186,30 @@ def spki_to_raw(spki_b64: str) -> bytes:
     raw = base64.b64decode(spki_b64)
     return raw[-32:]           # 12-byte DER prefix + 32-byte key
 
+# The preimage the gate hashed for a given leaf label, recomputed from the export.
+# Returns None when the leaf is not recomputable from the file alone (DOCUMENT: the
+# attachment text is not exported; unknown labels from a future format).
+def leaf_preimage(label, e, sealed_at):
+    if label == "QUERY":
+        return js_json({"q": e.get("query"), "ts": sealed_at})
+    if label == "RESPONSE":
+        return js_json({"r": e.get("response"), "model": e.get("model")})
+    if label == "RECEIPT":
+        return js_json(e.get("receipt"))
+    if label == "BIAS":
+        return js_json(e.get("biasScreen")) if e.get("biasScreen") is not None else None
+    if label == "SOURCES":
+        g = e.get("grounding")
+        return js_json([s.get("uri") for s in g["sources"]]) if g and g.get("sources") is not None else None
+    if label == "MEMORY":
+        m = e.get("memoryRecall")
+        return js_json(m["roots"]) if m and m.get("roots") is not None else None
+    if label == "TIMING":
+        model = e.get("model")
+        return js_json({"model": PROVIDER_MODEL.get(model, model),
+                        "llmMs": (e.get("timingMs") or {}).get("llm", 0)})
+    return None  # DOCUMENT, or an unrecognized label
+
 # ──────────────────────────────────── main ──────────────────────────────────────
 def verify_file(path):
     d = json.load(open(path, encoding="utf-8"))
@@ -113,23 +217,24 @@ def verify_file(path):
     pk_info = d.get("sealPublicKey") or {}
     pub = spki_to_raw(pk_info["publicKeySpkiB64"]) if pk_info.get("publicKeySpkiB64") else None
 
-    print(f"\n=== {path.split(chr(92))[-1]} ===")
+    print(f"\n=== {path.split(chr(92))[-1].split('/')[-1]} ===")
     print(f"site {d.get('site')}   started {d.get('startedAt')}   exchanges {len(ex)}")
     if pk_info:
         print(f"key  {pk_info.get('alg')} id={pk_info.get('keyId')}  payload={pk_info.get('signedPayloadFormat')}")
 
     chain = sha256_hex("VERUM_FRONTIER_SESSION_GENESIS" + d["startedAt"])
-    tally = {"merkle": [0, 0], "chain": [0, 0], "sig": [0, 0], "query": [0, 0], "resp": [0, 0]}
+    tally = {}
 
     def mark(k, ok):
-        tally[k][0 if ok else 1] += 1
+        t = tally.setdefault(k, [0, 0])
+        t[0 if ok else 1] += 1
         return ok
 
+    all_content_ok = True
     for i, e in enumerate(ex):
         seal = e.get("seal") or {}
         leaves = seal.get("leaves") or []
         digests = [l["sha256"] for l in leaves]
-        labels = {l["label"]: l["sha256"] for l in leaves}
         root = seal.get("root")
 
         m_ok = mark("merkle", merkle_root(digests) == root)
@@ -144,34 +249,46 @@ def verify_file(path):
         else:
             s_ok = None
 
-        # content binding: recompute the QUERY / RESPONSE leaves from the text in the file
-        q_ok = r_ok = None
-        if "QUERY" in labels:
-            q_ok = mark("query", sha256_hex(json.dumps(
-                {"q": e.get("query"), "ts": seal.get("sealedAt")}, separators=(",", ":"), ensure_ascii=False)) == labels["QUERY"])
-        if "RESPONSE" in labels:
-            r_ok = mark("resp", sha256_hex(json.dumps(
-                {"r": e.get("response"), "model": e.get("model")},
-                separators=(",", ":"), ensure_ascii=False)) == labels["RESPONSE"])
+        # Content binding: recompute every leaf whose preimage is in the export.
+        results = []
+        for l in leaves:
+            label = l["label"]
+            pre = leaf_preimage(label, e, seal.get("sealedAt"))
+            if pre is None:
+                results.append(f"{label.lower()}=na")
+                continue
+            ok = mark(f"leaf:{label}", sha256_hex(pre) == l["sha256"])
+            if not ok:
+                all_content_ok = False
+            results.append(f"{label.lower()}={'ok' if ok else 'FAIL'}")
 
         def g(v):
-            return "—" if v is None else ("ok" if v else "FAIL")
-        name = e.get("model")
-        print(f"  [{i:02d}] merkle {g(m_ok):4s} chain {g(c_ok):4s} sig {g(s_ok):4s} "
-              f"query {g(q_ok):4s} resp {g(r_ok):4s}  {str(name)[:34]:34s} leaves={len(digests)}")
+            return "na" if v is None else ("ok" if v else "FAIL")
+        name = str(e.get("model"))[:22]
+        print(f"  [{i:02d}] {name:22s} merkle {g(m_ok):4s} chain {g(c_ok):4s} sig {g(s_ok):4s}  "
+              + " ".join(results))
 
-    print(f"  session root claimed  {d.get('sessionChainRoot')}")
-    print(f"  session root recomputed {chain}   "
-          f"{'MATCH' if chain == d.get('sessionChainRoot') else 'MISMATCH'}")
-    for k, (ok, bad) in tally.items():
+    root_match = chain == d.get("sessionChainRoot")
+    print(f"  session chain root: {'MATCH' if root_match else 'MISMATCH'}")
+    for k in sorted(tally):
+        ok, bad = tally[k]
         if ok or bad:
-            print(f"    {k:7s} pass={ok} fail={bad}")
-    return tally
+            print(f"    {k:16s} pass={ok} fail={bad}")
+    overall = root_match and all(bad == 0 for ok, bad in tally.values())
+    print(f"  OVERALL: {'VERIFIED' if overall else 'FAILED'}")
+    return overall
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(2)
+    all_ok = True
     for p in sys.argv[1:]:
         try:
-            verify_file(p)
+            if not verify_file(p):
+                all_ok = False
         except Exception as exc:
             print(f"\n=== {p} ===\n  ERROR {type(exc).__name__}: {exc}")
+            all_ok = False
+    sys.exit(0 if all_ok else 1)
