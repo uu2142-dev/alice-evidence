@@ -31,15 +31,23 @@ import sys, json, hashlib, base64, re
 
 # id -> providerModel. Public data mirrored from the model registry; the TIMING
 # leaf is hashed over the provider's model name, not the gate's display id.
+# Append-only: a model the gate stops offering stays here, so sessions sealed
+# under it keep verifying. The gate's own copy is PROVIDER_MODEL in
+# rabbitholeai.ai's lib/sealVerify.ts; keep the two in step.
 PROVIDER_MODEL = {
-    "llama-3.3-70b": "llama-3.3-70b-versatile",
+    "llama-3.3-70b": "llama-3.3-70b-versatile",  # retired from the gate 2026-09-25
     "gpt-oss-120b": "openai/gpt-oss-120b",
-    "qwen3.6-27b": "qwen/qwen3.6-27b",
+    "gpt-oss-20b": "openai/gpt-oss-20b",          # added to the gate 2026-09-25
+    "qwen3-32b": "qwen/qwen3-32b",                # retired from the gate 2026-07-17
+    "qwen3.6-27b": "qwen/qwen3.6-27b",            # retired from the gate 2026-09-25
+    "qwen3.8-27b": "qwen/qwen3.8-27b",            # added to the gate 2026-09-25
     "gemini-2.5-flash": "gemini-2.5-flash",
     "claude-opus-4.8": "claude-opus-4-8",
+    "claude-opus-5.5": "claude-opus-5-5",         # added to the gate 2026-09-27
     "claude-sonnet-5": "claude-sonnet-5",
     "claude-haiku-4.5": "claude-haiku-4-5",
-    "claude-fable-5": "claude-fable-5",
+    "claude-fable-5": "claude-fable-5",           # retired from the gate 2026-09-27
+    "claude-fable-5.1": "claude-fable-5-1",       # added to the gate 2026-09-27
     "gpt-5.6-sol": "gpt-5.6-sol",
     "grok-4.5": "grok-4.5",
 }
